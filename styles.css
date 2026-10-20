@@ -884,8 +884,12 @@ section {
 
     .hero-logo {
         width: 100%;
-        max-width: 340px;
+        max-width: 140px;
         justify-self: center;
+       trasnform: rotate(0deg);
+       display: block;
+       height: auto;
+       object-fit: contain;
     }
 
     .intro-bubble {
