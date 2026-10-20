@@ -1,0 +1,1367 @@
+/* =========================================================
+   TODO KARRITOS - ESTILOS GENERALES
+   ========================================================= */
+
+
+/* =========================================================
+   COLORES PRINCIPALES
+   ========================================================= */
+
+:root {
+
+    /* Color de fondo principal */
+    --fondo: #FFF9EF;
+
+    /* Color crema para las tarjetas */
+    --crema: #FBF1E2;
+
+    /* Color del texto */
+    --texto: #241812;
+
+    /* Rosado principal */
+    --rosado: #E23F73;
+
+    /* Verde */
+    --verde: #0E8C82;
+
+    /* Amarillo */
+    --amarillo: #F3A712;
+
+    /* Naranja */
+    --naranja: #EB5B2A;
+
+    /* Líneas */
+    --linea: #E7D9BE;
+}
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+
+    /* Elimina espacios predeterminados */
+    margin: 0;
+
+    padding: 0;
+
+    /* Hace más fácil controlar tamaños */
+    box-sizing: border-box;
+
+}
+
+
+/* Desplazamiento suave al hacer clic en el menú */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+/* =========================================================
+   CUERPO DE LA PÁGINA
+   ========================================================= */
+
+body {
+
+    background-color: var(--fondo);
+
+    color: var(--texto);
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+header {
+
+    /* Coloca logo y menú en la misma línea */
+    display: flex;
+
+    /* Los separa a los extremos */
+    justify-content: space-between;
+
+    /* Los centra verticalmente */
+    align-items: center;
+
+    /* Espacio interno */
+    padding: 22px 6%;
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+}
+
+
+/* "Karritos" tendrá otro color */
+
+.logo span {
+
+    color: var(--naranja);
+
+}
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+nav {
+
+    display: flex;
+
+    gap: 24px;
+
+}
+
+
+nav a {
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+/* Cambio de color al pasar el mouse */
+
+nav a:hover {
+
+    color: var(--rosado);
+
+}
+
+
+/* =========================================================
+   SECCIÓN PRINCIPAL
+   ========================================================= */
+
+.hero {
+
+    padding: 70px 6% 80px;
+
+    max-width: 1100px;
+
+}
+
+
+/* Texto pequeño sobre el título */
+
+.hero-subtitle {
+
+    color: var(--verde);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+   ========================================================= */
+
+.hero h1 {
+
+    color: var(--naranja);
+
+    font-size: clamp(2.1rem, 3vw, 2.8rem);
+
+    line-height: 1;
+
+    max-width: 800px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN PRINCIPAL
+   ========================================================= */
+
+.hero-description {
+
+    color: #4A3A2C;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    max-width: 700px;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+
+/* Botón naranja */
+
+.btn-primary {
+
+    background-color: var(--naranja);
+
+    color: white;
+
+}
+
+
+/* Botón transparente */
+
+.btn-secondary {
+
+    border: 2px solid var(--texto);
+
+    color: var(--texto);
+
+}
+
+
+/* Efecto al pasar el mouse */
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+section {
+
+    padding: 55px 6%;
+
+}
+
+
+/* =========================================================
+   ENCABEZADO DE LAS SECCIONES
+   ========================================================= */
+
+.section-head {
+
+    max-width: 650px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Texto pequeño de cada sección */
+
+.section-subtitle {
+
+    color: var(--verde);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+
+}
+
+
+/* Títulos de las secciones */
+
+.section-head h2 {
+
+    font-size: 35px;
+
+    line-height: 1.1;
+
+}
+
+
+/* =========================================================
+   CUADRÍCULA DE PRODUCTOS
+   ========================================================= */
+
+.products-grid {
+
+    /* Crea 3 columnas */
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Espacio entre tarjetas */
+    gap: 18px;
+
+}
+
+
+/* =========================================================
+   TARJETAS DE PRODUCTOS
+   ========================================================= */
+
+.product-card {
+
+    background-color: var(--crema);
+
+    border: 2px solid var(--texto);
+
+    border-radius: 14px;
+
+    padding: 20px 16px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   CONTENIDO SUPERIOR DE LAS TARJETAS
+   ========================================================= */
+
+.product-card summary {
+
+    /* Quita la flecha predeterminada */
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+/* Quita la flecha en algunos navegadores */
+
+.product-card summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   ICONO DEL PRODUCTO
+   ========================================================= */
+
+.product-icon {
+
+    font-size: 35px;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   NOMBRE DEL PRODUCTO
+   ========================================================= */
+
+.product-card h3 {
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   PRECIO
+   ========================================================= */
+
+.price {
+
+    background-color: var(--amarillo);
+
+    color: var(--texto);
+
+    padding: 4px 10px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   FLECHA
+   ========================================================= */
+
+.arrow {
+
+    color: var(--verde);
+
+    font-size: 15px;
+
+    transition: 0.2s;
+
+}
+
+
+/* Cuando se abre la tarjeta */
+
+.product-card[open] .arrow {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL PRODUCTO
+   ========================================================= */
+
+.product-info {
+
+    margin-top: 14px;
+
+    padding-top: 14px;
+
+    border-top: 1px dashed var(--linea);
+
+    text-align: left;
+
+    color: #4A3A2C;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* Separación entre párrafos */
+
+.product-info p {
+
+    margin-bottom: 7px;
+
+}
+
+
+/* Último párrafo sin espacio */
+
+.product-info p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* Texto en negrita */
+
+.product-info strong {
+
+    color: var(--texto);
+
+}
+
+
+/* =========================================================
+   ADAPTACIÓN PARA TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .products-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Ocultamos temporalmente el menú */
+    nav {
+
+        display: none;
+
+    }
+
+
+    /* Una sola columna */
+    .products-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* Ajustamos el título */
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    /* Reducimos espacios */
+    .hero {
+
+        padding-top: 45px;
+
+    }
+
+}
+/* =========================================================
+   SEPARADOR DE BANDERITAS
+   ========================================================= */
+
+.bunting {
+
+    /* Ocupa todo el ancho de la página */
+    width: 100%;
+
+    /* Altura del separador */
+    height: 45px;
+
+    /* Organiza las banderas horizontalmente */
+    display: flex;
+
+    /* Evita que se salgan del contenedor */
+    overflow: hidden;
+
+}
+
+
+/* Cada bandera */
+
+.flag {
+
+    /* Hace que cada bandera ocupe el mismo espacio */
+    flex: 1;
+
+    /* Forma triangular */
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+}
+
+
+/* Color rosado */
+
+.flag.pink {
+
+    background-color: var(--rosado);
+
+}
+
+
+/* Color amarillo */
+
+.flag.yellow {
+
+    background-color: var(--amarillo);
+
+}
+
+
+/* Color verde */
+
+.flag.green {
+
+    background-color: var(--verde);
+}
+/* =========================================
+   PRESENTACIÓN PRINCIPAL DE TODO KARRITOS
+   ========================================= */
+
+/* Zona de presentación */
+.hero {
+    padding: 55px 24px 65px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Nombre de la marca dentro de una plaquita */
+.brand-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 28px;
+}
+
+/* Rayitas decorativas a los lados del logo */
+.brand-label::before,
+.brand-label::after {
+    content: "";
+    width: 45px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--rosado),
+        var(--amarillo)
+    );
+    border-radius: 10px;
+}
+
+/* Texto de la marca */
+.brand-label span {
+    display: inline-block;
+    padding: 11px 23px;
+    border: 1px solid #edb7cb;
+    border-radius: 14px;
+    background-color: var(--crema);
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    box-shadow: 0 5px 15px rgba(180, 70, 110, 0.08);
+}
+
+/* Título grande inspirado en el logo */
+.hero-title {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    font-size: clamp(38px, 6vw, 76px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+
+    background: linear-gradient(
+        120deg,
+        #b82e46,
+        #e83e75,
+        #c52a72
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Burbuja para el texto introductorio */
+.intro-bubble {
+    position: relative;
+    max-width: 760px;
+    margin: 35px auto 0;
+    padding: 25px 32px;
+    background: linear-gradient(
+        135deg,
+        #fff8ed,
+        #fff0f5
+    );
+    border: 1px solid #f2d6df;
+    border-radius: 28px;
+    box-shadow: 0 12px 28px rgba(120, 65, 85, 0.08);
+}
+
+/* Pequeña decoración de la burbuja */
+.intro-bubble::before {
+    content: "✦";
+    position: absolute;
+    top: -14px;
+    left: 24px;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--amarillo);
+    color: #8a5b29;
+    border-radius: 50%;
+    font-size: 16px;
+}
+/* Presentación en dos columnas */
+.hero {
+    padding: 60px 6%;
+    background:
+        radial-gradient(circle at 5% 10%, #fbe7c9, transparent 30%),
+        var(--crema);
+}
+
+.hero-layout {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* Texto de la izquierda */
+.hero-content {
+    text-align: left;
+    min-width: 0;
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 9px 16px;
+    border-left: 4px solid #f2b832;
+    color: #55545a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+/* Título con los colores del logo */
+.hero-title {
+    margin: 0 0 25px;
+    color: #e34e20;
+    font-size: clamp(34px, 4.3vw, 61px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+.hero-title span {
+    display: inline;
+    color: #eb5b2a;
+}
+
+/* Burbuja de introducción */
+.intro-bubble {
+    position: relative;
+    margin: 25px 0;
+    padding: 22px;
+    background: #ffffff;
+    border: 2px solid #f4dfbf;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(48, 49, 58, 0.07);
+}
+
+.intro-bubble::before {
+    content: "✦";
+    position: absolute;
+    top: -13px;
+    left: 20px;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #f2b832;
+    color: #35343a;
+}
+
+.intro-bubble p {
+    margin: 0;
+    color: #45434a;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Imagen del logo a la derecha */
+.hero-logo {
+    width: 100%;
+    max-width: 430px;
+    justify-self: end;
+    padding: 15px;
+    background: #ffffff;
+    border: 2px solid #f4dfbf;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(48, 49, 58, 0.12);
+    box-sizing: border-box;
+}
+
+.hero-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+}
+
+/* Botón */
+.hero-button {
+    display: inline-block;
+    padding: 15px 23px;
+    border-radius: 12px;
+    background: #e84f1c;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.2s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+/* En celulares, el contenido queda en una columna */
+@media (max-width: 750px) {
+    .hero {
+        padding: 38px 20px 45px;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: clamp(34px, 8vw, 48px);
+    }
+
+    .hero-logo {
+        width: 100%;
+        max-width: 340px;
+        justify-self: center;
+    }
+
+    .intro-bubble {
+        text-align: left;
+    }
+}
+/* ===== NOTAS IMPORTANTES Y CONTACTOS ===== */
+
+.info-contacto {
+    padding: 65px 6%;
+    background: #fff9ef;
+    font-family: Arial, sans-serif;
+}
+
+.info-contenedor {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* BURBUJA DE NOTAS */
+
+.notas-burbuja {
+    background: #ffffff;
+    border: 2px solid #f2d7b0;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(75, 63, 48, 0.08);
+}
+
+.notas-burbuja summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 24px;
+}
+
+.notas-burbuja summary::-webkit-details-marker {
+    display: none;
+}
+
+.notas-icono {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #fff0d6;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.notas-titulo {
+    flex: 1;
+    color: #d96a24;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.notas-titulo small {
+    display: block;
+    margin-top: 5px;
+    color: #77716b;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.flecha {
+    color: #d96a24;
+    font-size: 27px;
+    transition: transform 0.25s;
+}
+
+.notas-burbuja[open] .flecha {
+    transform: rotate(180deg);
+}
+
+.notas-contenido {
+    padding: 0 25px 24px;
+    border-top: 1px solid #f4e5d1;
+}
+
+.notas-contenido p {
+    margin: 15px 0 0;
+    color: #48454a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* BURBUJA DE CONTACTOS */
+
+.contactos-burbuja {
+    padding: 30px;
+    background: #ffffff;
+    border: 2px solid #f2d7b0;
+    border-radius: 30px;
+    box-shadow: 0 10px 28px rgba(75, 63, 48, 0.08);
+}
+
+.contactos-encabezado {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contactos-decoracion {
+    color: #e8a15a;
+    font-size: 30px;
+}
+
+.contactos-encabezado h2 {
+    margin: 8px 0;
+    color: #e8a15a;
+    font-size: 30px;
+}
+
+.contactos-encabezado p {
+    color: #77716b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* BOTONES DIGITALES */
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    margin-top: 13px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contacto-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 17px rgba(0, 0, 0, 0.07);
+}
+
+.contacto-icono {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #ffffff;
+    font-size: 25px;
+}
+
+.contacto-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.contacto-texto strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #38343a;
+    font-size: 16px;
+}
+
+.contacto-texto small {
+    display: block;
+    color: #625d61;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contacto-flecha {
+    font-size: 23px;
+    color: #625d61;
+}
+
+.whatsapp {
+    background: #e7f6e9;
+}
+
+.correo {
+    background: #fff0d9;
+}
+
+.instagram {
+    background: #fbe8f0;
+}
+
+.contactos-final {
+    margin: 25px 0 0;
+    text-align: center;
+    color: #77716b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+    .info-contacto {
+        padding: 40px 18px;
+    }
+
+    .notas-burbuja summary {
+        padding: 18px;
+        gap: 11px;
+    }
+
+    .notas-titulo {
+        font-size: 18px;
+    }
+
+    .notas-contenido {
+        padding: 0 18px 20px;
+    }
+
+    .contactos-burbuja {
+        padding: 20px 15px;
+    }
+
+    .contactos-encabezado h2 {
+        font-size: 26px;
+    }
+
+    .contacto-item {
+        gap: 11px;
+        padding: 13px 10px;
+    }
+
+    .contacto-icono {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .contacto-texto strong {
+        font-size: 15px;
+    }
+
+    .contacto-texto small {
+        font-size: 12px;
+    }
+}
+/* ===== CALIFICACIONES TODO KARRITOS ===== */
+
+.resenas-karritos {
+    padding: 70px 20px;
+    background: #fff9ef;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.resenas-contenedor {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.resenas-encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.resenas-etiqueta {
+    display: inline-block;
+    color: #d96a24;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.resenas-encabezado h2 {
+    margin: 15px 0;
+    color: #e8a15a;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.2;
+}
+
+.resenas-encabezado p {
+    max-width: 540px;
+    margin: 0 auto;
+    color: #625d61;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.resenas-tarjeta {
+    position: relative;
+    padding: 38px 30px;
+    background: #ffffff;
+    border: 2px solid #f2d7b0;
+    border-radius: 30px;
+    box-shadow: 0 14px 35px rgba(90, 65, 35, 0.09);
+    text-align: center;
+}
+
+.resenas-destello {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    color: #f2b832;
+    font-size: 32px;
+    animation: destello-resena 2.5s ease-in-out infinite;
+}
+
+.resenas-tarjeta h3 {
+    margin: 0 0 10px;
+    color: #d96a24;
+    font-size: 25px;
+}
+
+.resenas-ayuda {
+    margin: 0 0 20px;
+    color: #77716b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ESTRELLAS DIGITALES */
+
+.estrellas-calificacion {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 18px 0 10px;
+}
+
+.estrella-calificar {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #ded8ce;
+    font-size: clamp(35px, 9vw, 53px);
+    line-height: 1.3;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.estrella-calificar:hover {
+    transform: scale(1.16) rotate(-5deg);
+}
+
+.estrella-calificar.seleccionada {
+    color: #f2b832;
+    text-shadow: 0 3px 12px rgba(242, 184, 50, 0.25);
+    animation: estrella-pop 0.3s ease;
+}
+
+.estrella-calificar:focus-visible,
+.boton-resena:focus-visible {
+    outline: 3px solid #d96a24;
+    outline-offset: 4px;
+}
+
+.mensaje-estrellas {
+    min-height: 24px;
+    margin: 10px 0 25px;
+    color: #d96a24;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.resenas-tarjeta label {
+    display: block;
+    margin: 0 0 10px;
+    color: #45454d;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.resenas-tarjeta textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 115px;
+    padding: 16px;
+    border: 1.5px solid #f2d7b0;
+    border-radius: 18px;
+    outline: none;
+    background: #fffdf9;
+    color: #45454d;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.7;
+    resize: vertical;
+}
+
+.resenas-tarjeta textarea:focus {
+    border-color: #e8a15a;
+    box-shadow: 0 0 0 3px rgba(232, 161, 90, 0.15);
+}
+
+.boton-resena {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px 22px;
+    border: none;
+    border-radius: 16px;
+    background: #e8752e;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.boton-resena:hover {
+    transform: translateY(-2px);
+    background: #d96a24;
+}
+
+.boton-resena span {
+    font-size: 21px;
+}
+
+.resenas-pie {
+    margin: 22px 0 0;
+    color: #77716b;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.resenas-error {
+    margin: 12px 0 0;
+    color: #a33a30;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@keyframes destello-resena {
+    0%, 100% {
+        opacity: 0.65;
+        transform: scale(0.9) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.12) rotate(12deg);
+    }
+}
+
+@keyframes estrella-pop {
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+@media (max-width: 500px) {
+    .resenas-karritos {
+        padding: 45px 16px;
+    }
+
+    .resenas-tarjeta {
+        padding: 32px 18px;
+        border-radius: 24px;
+    }
+
+    .resenas-tarjeta h3 {
+        font-size: 22px;
+    }
+
+    .estrellas-calificacion {
+        gap: 5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .resenas-destello,
+    .estrella-calificar {
+        animation: none;
+        transition: none;
+    }
+}
