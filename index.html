@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Karritos</title>
-    <link rel="stylesheet" href="./styles.css">
-
+    <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body>
 
@@ -45,7 +45,6 @@
         <!-- Texto a la izquierda -->
         <div class="hero-content">
                 
-            </p>
 
             <h1 class="hero-title">
                 Sabores que convierten
@@ -71,7 +70,10 @@
 
         <!-- Logo a la derecha -->
         <div class="hero-logo">
-            <img src="./logoprincipal.png" alt="Logo oficial de Todo Karritos">
+            <img
+                src="assets/LOGOSVG.svg"
+                alt="Logo oficial de Todo Karritos"
+            >
         </div>
 
     </div>    
@@ -255,11 +257,10 @@
                 <span class="price">$11.000 / unidad</span>
                 <span class="arrow">▾</span>
             </summary>
-            <div class="product-info">
-                <p><strong>minimo:</strong> 40 UNIDADES</p>
-                    INCLUYE:Mango en tiras con leche condensada,limon,sal y pimienta
-                </p>
-            </div>
+           <div class="product-info">
+    <p><strong>Mínimo:</strong> 40 UNIDADES</p>
+    <p>INCLUYE: Mango en tiras con leche condensada, limón, sal y pimienta</p>
+</div>
         </details>
 
         <!-- PRODUCTO 2: CRISPETAS -->
@@ -771,5 +772,568 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserva tu fecha</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --naranja: #F28C38;
+  --naranja-oscuro: #DF7826;
+  --blanco: #FFFFFF;
+  --negro: #171717;
+  --rosado: #FCEFF1;
+  --rosado-claro: #FFF8F8;
+  --texto: #39343A;
+  --borde: #F0E3E4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--texto);
+  background:
+    radial-gradient(ellipse at top left, #FCE7D8, transparent 35%),
+    radial-gradient(ellipse at bottom right, #FCEFF1, transparent 35%),
+    #FFFCFA;
+  min-height: 100vh;
+  padding: 35px 18px;
+}
+
+.contenedor {
+  max-width: 1090px;
+  margin: auto;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 30px;
+  background: var(--rosado);
+  color: #B95D35;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--negro);
+}
+
+h1 {
+  font-size: clamp(38px, 6vw, 58px);
+  line-height: 1.12;
+  margin-bottom: 15px;
+}
+
+h1 span {
+  color: var(--naranja);
+  font-style: italic;
+}
+
+.encabezado p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #69616A;
+}
+
+.tarjeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--blanco);
+  border: 1px solid #F4E3E3;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px #7C49300D;
+}
+
+.panel {
+  padding: 32px;
+  min-width: 0;
+}
+
+.panel-derecho {
+  background: linear-gradient(140deg, #FFF9F8, #FCEFF1);
+  border-left: 1px solid var(--borde);
+}
+
+.paso {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--naranja-oscuro);
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 29px;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #766D76;
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  margin: 20px 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--negro);
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #E4DFE3;
+  border-radius: 11px;
+  background: var(--blanco);
+  color: var(--negro);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: .2s;
+}
+
+input:focus {
+  border-color: var(--naranja);
+  box-shadow: 0 0 0 3px #F28C381A;
+}
+
+.horarios {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.hora {
+  padding: 13px 3px;
+  border: 1px solid #E5DFE3;
+  background: var(--blanco);
+  color: var(--negro);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.hora:hover {
+  border-color: var(--naranja);
+  transform: translateY(-2px);
+}
+
+.hora.activa {
+  background: var(--naranja);
+  border-color: var(--naranja);
+  color: var(--blanco);
+}
+
+.aviso {
+  padding: 12px 15px;
+  border-radius: 11px;
+  background: #FFF5F2;
+  color: #76636A;
+  font-size: 12px;
+  margin-top: 23px;
+}
+
+.resumen {
+  background: var(--blanco);
+  border: 1px solid #F0E5E5;
+  border-radius: 13px;
+  padding: 18px;
+  margin: 22px 0 16px;
+}
+
+.resumen-titulo {
+  color: var(--naranja-oscuro);
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+
+.detalle {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 0;
+  border-bottom: 1px solid #F3EEEE;
+  min-width: 0;
+}
+
+.detalle:last-child {
+  border-bottom: none;
+}
+
+.icono {
+  min-width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--rosado);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.detalle small {
+  display: block;
+  color: #8C7C86;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.detalle strong {
+  color: var(--negro);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.nota {
+  font-size: 12px;
+  color: #796D77;
+  line-height: 1.8;
+  margin: 16px 0;
+}
+
+.boton {
+  width: 100%;
+  padding: 16px 12px;
+  border: none;
+  border-radius: 11px;
+  background: var(--naranja);
+  color: var(--blanco);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.boton:hover {
+  background: var(--naranja-oscuro);
+  transform: translateY(-2px);
+}
+
+.boton:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  color: #A33E48;
+  font-size: 12px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.pie {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #8C737A;
+  letter-spacing: .5px;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 24px 12px;
+  }
+
+  .tarjeta {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 25px 20px;
+  }
+
+  .panel-derecho {
+    border-left: none;
+    border-top: 1px solid var(--borde);
+  }
+
+  .horarios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="contenedor">
+
+  <header class="encabezado">
+    <div class="etiqueta">✦ MOMENTOS ESPECIALES ✦</div>
+
+    <h1>
+      Tu próxima fecha<br>
+      comienza <span>aquí.</span>
+    </h1>
+
+    <p>
+      Elige el día y la hora que prefieras.<br>
+      Nosotros te ayudaremos con el resto. ♡
+    </p>
+  </header>
+
+  <section class="tarjeta">
+
+    <!-- PANEL IZQUIERDO -->
+    <div class="panel">
+      <div class="paso">PASO 01 — TU FECHA</div>
+
+      <h2>¿Cuándo nos visitas?</h2>
+
+      <p class="subtitulo">
+        Escoge la fecha que tienes en mente para tu reserva.
+      </p>
+
+      <label for="nombre">Tu nombre</label>
+      <input
+        id="nombre"
+        type="text"
+        placeholder="¿Cómo te llamas?"
+        autocomplete="name"
+      >
+
+      <label for="fecha">Selecciona el día</label>
+      <input id="fecha" type="date">
+
+      <label>Elige tu horario</label>
+
+      <div class="horarios" id="horarios">
+        <button type="button" class="hora" data-hora="09:00">9:00 a. m.</button>
+        <button type="button" class="hora" data-hora="10:00">10:00 a. m.</button>
+        <button type="button" class="hora" data-hora="11:00">11:00 a. m.</button>
+        <button type="button" class="hora" data-hora="12:00">12:00 p. m.</button>
+        <button type="button" class="hora" data-hora="14:00">2:00 p. m.</button>
+        <button type="button" class="hora" data-hora="15:00">3:00 p. m.</button>
+        <button type="button" class="hora" data-hora="16:00">4:00 p. m.</button>
+        <button type="button" class="hora" data-hora="17:00">5:00 p. m.</button>
+      </div>
+
+      <div class="aviso">
+        ✦ El horario elegido estará sujeto a confirmación.
+      </div>
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="panel panel-derecho">
+      <div class="paso">PASO 02 — TU RESERVA</div>
+
+      <h2>¡Todo listo!</h2>
+
+      <p class="subtitulo">
+        Revisa los detalles de tu solicitud antes de enviarla.
+      </p>
+
+      <div class="resumen">
+        <div class="resumen-titulo">RESUMEN DE TU RESERVA</div>
+
+        <div class="detalle">
+          <div class="icono">♡</div>
+          <div>
+            <small>Nombre</small>
+            <strong id="resumenNombre">Tu nombre aparecerá aquí</strong>
+          </div>
+        </div>
+
+        <div class="detalle">
+          <div class="icono">📅</div>
+          <div>
+            <small>Fecha seleccionada</small>
+            <strong id="resumenFecha">Elige una fecha</strong>
+          </div>
+        </div>
+
+        <div class="detalle">
+          <div class="icono">◷</div>
+          <div>
+            <small>Hora seleccionada</small>
+            <strong id="resumenHora">Elige un horario</strong>
+          </div>
+        </div>
+      </div>
+
+      <p class="nota">
+        Al continuar, se abrirá WhatsApp con un mensaje listo
+        para enviar. Tu reserva solo quedará confirmada cuando
+        recibas nuestra respuesta.
+      </p>
+
+      <button class="boton" id="reservar" disabled>
+        ♡ Solicitar mi reserva por WhatsApp
+      </button>
+
+      <p class="error" id="error" role="status"></p>
+    </div>
+
+  </section>
+
+  <footer class="pie">
+    ───── Hecho con amor para crear momentos inolvidables ♡ ─────
+  </footer>
+
+</main>
+
+<script>
+  // WhatsApp de Colombia
+  const WHATSAPP = "573216080321";
+
+  const nombre = document.getElementById("nombre");
+  const fecha = document.getElementById("fecha");
+  const botonesHora = document.querySelectorAll(".hora");
+  const reservar = document.getElementById("reservar");
+  const error = document.getElementById("error");
+
+  let horaElegida = "";
+
+  // Obtener la fecha local de hoy
+  function obtenerHoy() {
+    const hoy = new Date();
+
+    return [
+      hoy.getFullYear(),
+      String(hoy.getMonth() + 1).padStart(2, "0"),
+      String(hoy.getDate()).padStart(2, "0")
+    ].join("-");
+  }
+
+  fecha.min = obtenerHoy();
+
+  function actualizar() {
+    document.getElementById("resumenNombre").textContent =
+      nombre.value.trim() || "Tu nombre aparecerá aquí";
+
+    if (fecha.value) {
+      const [anio, mes, dia] = fecha.value.split("-").map(Number);
+      const fechaElegida = new Date(anio, mes - 1, dia);
+
+      document.getElementById("resumenFecha").textContent =
+        fechaElegida.toLocaleDateString("es-CO", {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        });
+    } else {
+      document.getElementById("resumenFecha").textContent =
+        "Elige una fecha";
+    }
+
+    if (horaElegida) {
+      const [horas, minutos] = horaElegida.split(":").map(Number);
+      const hora = new Date();
+      hora.setHours(horas, minutos, 0, 0);
+
+      document.getElementById("resumenHora").textContent =
+        hora.toLocaleTimeString("es-CO", {
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: true
+        });
+    } else {
+      document.getElementById("resumenHora").textContent =
+        "Elige un horario";
+    }
+
+    reservar.disabled = !(
+      nombre.value.trim() &&
+      fecha.value &&
+      horaElegida
+    );
+
+    error.textContent = "";
+  }
+
+  nombre.addEventListener("input", actualizar);
+  fecha.addEventListener("change", actualizar);
+
+  botonesHora.forEach(boton => {
+    boton.addEventListener("click", () => {
+      botonesHora.forEach(b => b.classList.remove("activa"));
+
+      boton.classList.add("activa");
+      horaElegida = boton.dataset.hora;
+
+      actualizar();
+    });
+  });
+
+  reservar.addEventListener("click", () => {
+    if (!nombre.value.trim() || !fecha.value || !horaElegida) {
+      error.textContent = "Completa tu nombre, fecha y horario.";
+      return;
+    }
+
+    if (fecha.value < obtenerHoy()) {
+      error.textContent = "Selecciona una fecha válida.";
+      return;
+    }
+
+    const [anio, mes, dia] = fecha.value.split("-").map(Number);
+    const fechaSeleccionada = new Date(anio, mes - 1, dia);
+
+    const fechaTexto = fechaSeleccionada.toLocaleDateString("es-CO", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+
+    const [h, m] = horaElegida.split(":").map(Number);
+    const horaDate = new Date();
+    horaDate.setHours(h, m, 0, 0);
+
+    const horaTexto = horaDate.toLocaleTimeString("es-CO", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true
+    });
+
+    const mensaje =
+     `Hola! 😊 Mi nombre es ${nombre.value.trim()}.\n\n` +
+      `Estamos interesados en reservar el día ${fechaTexto}, ` +
+     `a las ${horaTexto}.\n\n`+
+     `¿Nos podrían confirmar la disponibilidad? Muchas gracias. ♡`;
+
+    const url =
+     `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+
+  actualizar();
+</script>
+
+</body>
+</html>
 </body>
 </html>
